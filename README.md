@@ -1,2 +1,2 @@
-# proj_teach_fstudy
+# fstudy test
 test
