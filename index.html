@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Co-Pilot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <h1>Feedback Co-Pilot</h1>
+    <nav>
+      <a href="#">Students</a>
+      <a href="#">Records</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <!-- Left Column: Submission & Rubric -->
+    <section class="panel submission-panel">
+  <div class="panel-header">
+    <span>Student Submission</span>
+    <div class="reading-controls">
+      <button type="button" id="font-decrease" class="btn-reading" aria-label="Decrease font size">A-</button>
+      <span id="font-size-display" class="font-display" aria-live="polite">16px</span>
+      <button type="button" id="font-increase" class="btn-reading" aria-label="Increase font size">A+</button>
+      <button type="button" id="font-reset" class="btn-reading" aria-label="Reset font size to default">↺</button>
+      <button type="button" id="fullscreen-toggle" class="btn-reading" aria-label="Enter full screen reading mode"> Expand</button>
+    </div>
+  </div>
+  <div class="panel-body read-only" id="submission-text">
+    <p>The Martian is taken down and falls into the lake and boils the water without meaning to. This shows just how dangerous the Martians are as they had killed many people in a lake even while dead. The Martians are shown as terrifying when Wells describes the destruction the Martians had caused.</p>
+    <p>Wells make the Martians have a terrifying effect on the crowd watching the Martians walking towards them. Wells uses the words frightened and terrified to show how the crowd feels and the Martians seem to trigger a “every man for himself” feeling within the crowd.</p>
+    <p>Wells creates a sense that the Martians are terrifying and completely different to us. He shows this with the words “rolling motion” and “fast as flying birds”. This shows how unusual the Martians are.</p>
+  </div>
+
+  <div class="panel-header">Rubric</div>
+      <div class="panel-body">
+        <div class="rubric-item">Level 1: Simple, explicit comments, 1-5 marks</div>
+        <div class="rubric-item">Level 2: Supported, relevant comments, 6-10 marks</div>
+        <div class="rubric-item">Level 3: Explained, structured comments, 11-15 marks</div>
+        <div class="rubric-item">Level 4: Clear understanding, 16-20 marks</div>
+        <div class="rubric-item">Level 5: Thoughtful, developed consideration, 21-25 marks</div>
+        <div class="rubric-item">Level 6: Convincing, critical analysis, 26-30 marks</div>
+      </div>
+</section>
+
+
+
+    <!-- Middle Top: Draft Editor -->
+    <section class="panel draft-panel">
+      <div class="panel-header">Your Draft</div>
+      <div class="toolbar" role="toolbar" aria-label="Text formatting">
+        <button type="button" data-command="bold" aria-label="Bold" aria-pressed="false"><b>B</b></button>
+        <button type="button" data-command="italic" aria-label="Italic" aria-pressed="false"><i>I</i></button>
+        <button type="button" data-command="underline" aria-label="Underline" aria-pressed="false"><u>U</u></button>
+        <span class="separator"></span>
+        <button type="button" data-command="justifyLeft" aria-label="Align Left"><i class="fa-solid fa-align-left" aria-hidden="true"></i></button>
+        <button type="button" data-command="justifyCenter" aria-label="Align Center"><i class="fa-solid fa-align-center" aria-hidden="true"></i></button>
+        <button type="button" data-command="justifyRight" aria-label="Align Right"><i class="fa-solid fa-align-right" aria-hidden="true"></i></button>
+        <span class="separator"></span>
+        <button type="button" data-command="insertUnorderedList" aria-label="Bullet List">•</button>
+        <button type="button" data-command="insertOrderedList" aria-label="Numbered List">1.</button>
+      </div>
+      <div class="panel-body">
+        <div id="editor" class="rich-text-area" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Feedback draft">
+          <ul>
+            <li>You did a good job but there are areas that need improvement...</li>
+            <li>The references to the wider text are rather descriptive...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Top: Quick Actions -->
+    <aside class="panel actions-panel">
+      <div class="panel-header accent">Quick Actions</div>
+      <div class="panel-body">
+        <div class="action-group">
+          <label for="action-type">Action Type</label>
+          <select id="action-type"><option>Fix Grammar</option><option>Summarize</option></select>
+        </div>
+        <div class="action-group">
+          <label for="focus-area">Focus</label>
+          <select id="focus-area"><option>Global</option><option>Local</option></select>
+        </div>
+        <div class="action-group">
+          <label for="scope">Scope</label>
+          <select id="scope"><option>Comprehensive</option><option>Specific</option></select>
+        </div>
+        <div class="action-group">
+          <label for="strategy">Strategy</label>
+          <select id="strategy"><option>Direct</option><option>Socratic</option></select>
+        </div>
+        <div class="action-group">
+          <label for="orientation">Orientation</label>
+          <select id="orientation"><option>Positive</option><option>Constructive</option></select>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary">✓ Apply</button>
+          <button class="btn btn-secondary">✕ Cancel</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Bottom Right: Chat -->
+    <section class="panel chat-panel">
+      <div class="panel-header chat">Chat with the Feedback Co-pilot</div>
+      <div class="chat-messages" role="log" aria-live="polite">
+        <div class="message user">Can you paraphrase so it sounds more supportive and fix the grammar?</div>
+        <div class="message bot">
+          <p><strong>Of course, here is a more supportive feedback with improved grammar:</strong></p>
+          <p>You have made a solid start with relevant ideas and quotation choices, and you do show understanding of how Wells presents the Martians as frightening. To improve, try turning your quotations into deeper analysis...</p>
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" placeholder="Type your message..." aria-label="Chat message input">
+        <button class="btn btn-primary"> Send</button>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Fullscreen Reading Overlay (Moved OUTSIDE main/dashboard) -->
+  <div id="reading-overlay" class="reading-overlay" role="dialog" aria-modal="true" aria-label="Full screen reading view" hidden>
+    <div class="overlay-header">
+      <h2>Student Submission</h2>
+      <button type="button" id="overlay-close" class="btn-reading" aria-label="Exit full screen">✕ Close</button>
+    </div>
+    <div class="overlay-content" id="overlay-text"></div>
+    <div class="overlay-controls">
+      <button type="button" id="overlay-font-decrease" class="btn-reading" aria-label="Decrease font size">A-</button>
+      <span id="overlay-font-display" class="font-display" aria-live="polite">16px</span>
+      <button type="button" id="overlay-font-increase" class="btn-reading" aria-label="Increase font size">A+</button>
+      <button type="button" id="overlay-font-reset" class="btn-reading" aria-label="Reset font size">↺</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
