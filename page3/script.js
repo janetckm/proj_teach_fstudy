@@ -48,6 +48,68 @@ document.addEventListener('DOMContentLoaded', () => {
   const MAX_FONT_SIZE = 32;
   let currentFontSize = DEFAULT_FONT_SIZE;
 
+  // Feedback Bank Logic
+  const toggles = document.querySelectorAll('.snippet-item input[type="checkbox"]');
+  const searchInput = document.getElementById('snippet-search');
+
+  // Define the text mapping (Simulating the logic from the image)
+  // In a real app, this might come from a database.
+  // Note: The image shows a complex paragraph. Here we concatenate active snippets.
+  const snippetMap = {
+    'some-understanding': 'You shows <strong>some understanding</strong> of ideas, themes, events and characters in the texts studied.',
+    'too-general': 'The response is <strong>too general</strong>.',
+    'explains-clearly': 'In some instances, you did well in explaining <strong>clearly</strong> the effects of certain words and sentences on the intended reader.',
+    'simple-inferences': 'However, you make <strong>simple, limited</strong> inferences and deductions.',
+    'points-general': 'More specifically, some points remain a little general; aim for more precise explanation of <em>how</em> the language has an impact.',
+    'link-impact-2': 'Stronger moments of analysis appear when you link word choice to reader impact.',
+    'elaborate-quotes': 'Elaborate on the quotes you choose to explore.',
+    'effective-evidence': 'Effective selection of evidence.',
+    'writer-choice': 'Makes <strong>some attempt</strong> to describe why a writer might have chosen particular words.',
+    'link-impact-1': 'Stronger moments of analysis appear when you link word choice to reader impact.',
+    'link-impact-3': 'Stronger moments of analysis appear when you link word choice to reader impact.',
+    'avoid-repetition': 'Avoid repetition, make sure to diversify in the language you use.'
+  };
+
+  const updateEditor = () => {
+    let activeSnippets = [];
+    
+    // Collect text from checked boxes
+    toggles.forEach(toggle => {
+      if (toggle.checked) {
+        const key = toggle.dataset.snippet;
+        if (snippetMap[key]) {
+          activeSnippets.push(snippetMap[key]);
+        }
+      }
+    });
+
+    // Join with spaces (or newlines if preferred)
+    // The image shows a flowing paragraph, so we join with spaces.
+    const feedbackHTML = activeSnippets.join(' ');
+    
+    if (editor) {
+      editor.innerHTML = feedbackHTML || '<p>Toggle snippets to generate feedback...</p>';
+    }
+  };
+
+  // Event Listeners for Toggles
+  toggles.forEach(toggle => {
+    toggle.addEventListener('change', updateEditor);
+  });
+
+  // Search Filter Logic
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase();
+      document.querySelectorAll('.snippet-item').forEach(item => {
+        const text = item.querySelector('.snippet-text').textContent.toLowerCase();
+        item.style.display = text.includes(term) ? 'flex' : 'none';
+      });
+    });
+
+     updateEditor();
+  }
+
   // DOM references for controls
   const controls = {
     inline: {
@@ -120,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize
   updateFontSize(DEFAULT_FONT_SIZE);
+  
   
 });
 
