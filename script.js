@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const editor = document.getElementById('editor');
+  const applySelectedBtn = document.getElementById('apply-selected-btn');
+
   if (!editor) return;
 
   const toolbarButtons = document.querySelectorAll('.toolbar button[data-command]');

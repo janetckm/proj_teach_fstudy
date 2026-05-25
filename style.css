@@ -86,6 +86,10 @@ nav a:hover { color: var(--color-primary); }
 /* .chat-panel { grid-column: 2 / 4; grid-row: 2; } */
 .refinements-panel { grid-column: 2 / 4; grid-row: 2; }
 
+.draft-panel{
+  max-height: 250px;
+}
+
 #submission-text{
    min-height: 400px; 
 }
@@ -300,8 +304,8 @@ body.reading-active .dashboard {
   background: #fff;
   border-bottom: 1px solid var(--color-border);
 }
-.refinements-header h2 { margin: 0 0 4px 0; font-size: 1.25rem; color: var(--color-primary); }
-.refinements-header .subtitle { margin: 0; font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; }
+.refinements-header h2 { margin: 0 0 4px 0; font-size: 0.9rem; color: var(--color-primary); }
+.refinements-header .subtitle { margin: 0; font-size: 0.75rem; color: var(--color-text-muted); font-style: italic; }
 
 /* Grid Layout for Cards */
 .refinements-grid {
@@ -415,6 +419,8 @@ body.reading-active .dashboard {
   justify-content: space-between;
   background: #fff;
 }
+
+
 
 /* Responsive */
 @media (max-width: 1024px) {
