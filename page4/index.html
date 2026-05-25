@@ -9,10 +9,11 @@
 </head>
 <body>
   <header>
-    <h1>Feedback Co-Pilot: S1</h1>
+    <h1>Feedback Co-Pilot: S4
+    </h1>
     <nav>
-      <a href="#"></a>
-      <a href="page2/index.html">Next</a>
+      <a href="../page3/index.html">Previous</a>
+      <a href="../index.html">Next</a>
       <a href="#">Logout</a>
     </nav>
   </header>
@@ -35,8 +36,7 @@
     <p>Wells make the Martians have a terrifying effect on the crowd watching the Martians walking towards them. Wells uses the words frightened and terrified to show how the crowd feels and the Martians seem to trigger a “every man for himself” feeling within the crowd.</p>
     <p>Wells creates a sense that the Martians are terrifying and completely different to us. He shows this with the words “rolling motion” and “fast as flying birds”. This shows how unusual the Martians are.</p>
   </div>
-  
-  <!-- Left Column: Rubric -->
+
   <div class="panel-header">Rubric</div>
       <div class="panel-body">
         <div class="rubric-item">Level 1: Simple, explicit comments, 1-5 marks</div>
@@ -73,117 +73,81 @@
           </ul>
         </div>
       </div>
+
+      <div class="panel-footer editor-footer">
+    <button class="btn btn-secondary"><i class="fa-solid fa-shuffle"></i> Remix again</button>
+    <button class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Edit</button>
+    <button class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send </button>
+  </div>
     </section>
 
-    <!-- Bottom Right: Chat -->
-    <section class="panel refinements-panel">
-      <div class="panel-header refinements-header">
-    <div>
-      <h2>Suggested Refinements</h2>
-      <p class="subtitle">Suggestions to improve clarity, tone, grammar, and specificity.</p>
+    <!-- Right Top: Feedback Bank -->
+  <section class="panel generate-panel">
+  <div class="panel-body">
+    <div class="generate-header">
+      <h2>Generate Feedback</h2>
+      <p class="subtitle">Draft complete feedback based on your preferences and the rubric.</p>
     </div>
-    <button class="btn btn-primary" id="refine-again-btn">
-      <i class="fa-solid fa-arrows-rotate"></i> Refine Again
+
+    <h3 class="section-subhead">Adjust Feedback</h3>
+
+    <!-- Focus Slider -->
+    <div class="slider-group">
+      <label class="slider-label-main">Focus</label>
+      <div class="slider-wrapper">
+        <div class="slider-labels">
+          <span>Local</span>
+          <span class="center-label">Blended</span>
+          <span>Global</span>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="focus">
+      </div>
+    </div>
+
+    <!-- Scope Slider -->
+    <div class="slider-group">
+      <label class="slider-label-main">Scope</label>
+      <div class="slider-wrapper">
+        <div class="slider-labels">
+          <span>Comprehensive</span>
+          <span class="center-label">Blended</span>
+          <span>Focused</span>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="0" class="tri-slider" data-param="scope">
+      </div>
+    </div>
+
+    <!-- Strategy Slider -->
+    <div class="slider-group">
+      <label class="slider-label-main">Strategy</label>
+      <div class="slider-wrapper">
+        <div class="slider-labels">
+          <span>Direct</span>
+          <span class="center-label">Blended</span>
+          <span>Indirect</span>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="strategy">
+      </div>
+    </div>
+
+    <!-- Orientation Slider -->
+    <div class="slider-group">
+      <label class="slider-label-main">Orientation</label>
+      <div class="slider-wrapper">
+        <div class="slider-labels">
+          <span>Positive</span>
+          <span class="center-label">Blended</span>
+          <span>Negative</span>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="orientation">
+      </div>
+    </div>
+
+    <button class="btn-generate" id="generate-btn">
+      <i class="fa-solid fa-wand-magic-sparkles"></i> Generate
     </button>
   </div>
-
-  <div class="panel-body refinements-grid">
-    <!-- Card 1: Tone -->
-    <div class="suggestion-card" data-type="tone">
-      <div class="card-top">
-        <span class="card-label">Tone</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>You do well in commenting on the reactions of the crowd, good use of quotations e.g "the Martians seem to trigger a 'every man for himself' feeling with in the crowd."</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">You comment effectively on the crowd's reactions and your quotation choice is strong, for example: 'the Martians seem to trigger an 'every man for himself' feeling within the crowd.'</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 2: Clarity -->
-    <div class="suggestion-card" data-type="clarity">
-      <div class="card-top">
-        <span class="card-label">Clarity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>e.g Words such as 'rush', 'jerked' and 'heaved.. indicating the danger of the Martians as an enemy and their effect on the reader is considered, but this still remains a bit vague.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">Strong word choices quoted ("rush," "jerked," "heaved"), but the effect on the reader is explained too generally—add specific connotations.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 3: Specificity -->
-    <div class="suggestion-card" data-type="specificity">
-      <div class="card-top">
-        <span class="card-label">Specificity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>The weaknesses of this response is in the references to the text as a whole. You use general and descriptive, rather than showing clear understanding.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">The main area to improve is your use of the novel as a whole. Some references are quite general and descriptive (what happens) rather than analytical (how Wells presents it and what it suggests). Adding brief quotations and commenting on technique will show clearer understanding.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 4: Grammar -->
-    <div class="suggestion-card" data-type="grammar">
-      <div class="card-top">
-        <span class="card-label">Grammar</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>"question but"</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">"question, but"</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="panel-footer refinements-footer">
-    <button class="btn btn-secondary">✕ Close</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-cloud-arrow-down"></i> Export</button>
-    <button class="btn btn-primary" id="apply-selected-btn"><i class="fa-solid fa-check-double"></i> Apply Selected</button>
-  </div>
-</section>
+  </section>
   </main>
   
   <!-- Fullscreen Reading Overlay (Moved OUTSIDE main/dashboard) -->

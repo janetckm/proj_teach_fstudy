@@ -120,53 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize
   updateFontSize(DEFAULT_FONT_SIZE);
-
-  if (applySelectedBtn && editor) {
-    applySelectedBtn.addEventListener('click', () => {
-      const acceptedCards = document.querySelectorAll('.suggestion-card .btn-icon.accept[aria-pressed="true"]');
-      
-      if (acceptedCards.length === 0) {
-        alert("Please accept at least one suggestion to apply.");
-        return;
-      }
-
-      let appendText = "<br><strong>--- Applied Refinements ---</strong><br><ul>";
-      
-      acceptedCards.forEach(btn => {
-        const card = btn.closest('.suggestion-card');
-        const suggestedText = card.querySelector('.text-block.suggested p').innerText;
-        const type = card.dataset.type;
-        appendText += `<li><strong>[${type}]</strong> ${suggestedText}</li>`;
-      });
-      
-      appendText += "</ul>";
-      
-      // Append to editor
-      editor.focus();
-      document.execCommand('insertHTML', false, appendText);
-      
-      // Visual feedback
-      applySelectedBtn.textContent = "✓ Applied";
-      setTimeout(() => {
-        applySelectedBtn.innerHTML = '<i class="fa-solid fa-check-double"></i> Apply Selected';
-      }, 2000);
-    });
-  }
-
-  // Toggle Accept/Reject State for Buttons
-  document.querySelectorAll('.btn-icon').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // Toggle aria-pressed for state tracking
-      const isPressed = btn.getAttribute('aria-pressed') === 'true';
-      btn.setAttribute('aria-pressed', !isPressed);
-      
-      // Visual toggle logic (optional, CSS handles hover, but active state is good)
-      if (btn.classList.contains('accept')) {
-         btn.style.background = !isPressed ? 'var(--color-primary)' : '';
-         btn.style.color = !isPressed ? 'white' : '';
-      }
-    });
-  });
   
 });
 

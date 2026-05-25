@@ -9,10 +9,10 @@
 </head>
 <body>
   <header>
-    <h1>Feedback Co-Pilot: S1</h1>
+    <h1>Feedback Co-Pilot</h1>
     <nav>
-      <a href="#"></a>
-      <a href="page2/index.html">Next</a>
+      <a href="#">Students</a>
+      <a href="#">Records</a>
       <a href="#">Logout</a>
     </nav>
   </header>
@@ -35,8 +35,7 @@
     <p>Wells make the Martians have a terrifying effect on the crowd watching the Martians walking towards them. Wells uses the words frightened and terrified to show how the crowd feels and the Martians seem to trigger a “every man for himself” feeling within the crowd.</p>
     <p>Wells creates a sense that the Martians are terrifying and completely different to us. He shows this with the words “rolling motion” and “fast as flying birds”. This shows how unusual the Martians are.</p>
   </div>
-  
-  <!-- Left Column: Rubric -->
+
   <div class="panel-header">Rubric</div>
       <div class="panel-body">
         <div class="rubric-item">Level 1: Simple, explicit comments, 1-5 marks</div>
@@ -75,115 +74,52 @@
       </div>
     </section>
 
+    <!-- Right Top: Quick Actions -->
+    <aside class="panel actions-panel">
+      <div class="panel-header accent">Quick Actions</div>
+      <div class="panel-body">
+        <div class="action-group">
+          <label for="action-type">Action Type</label>
+          <select id="action-type"><option>Fix Grammar</option><option>Summarize</option></select>
+        </div>
+        <div class="action-group">
+          <label for="focus-area">Focus</label>
+          <select id="focus-area"><option>Global</option><option>Local</option></select>
+        </div>
+        <div class="action-group">
+          <label for="scope">Scope</label>
+          <select id="scope"><option>Comprehensive</option><option>Specific</option></select>
+        </div>
+        <div class="action-group">
+          <label for="strategy">Strategy</label>
+          <select id="strategy"><option>Direct</option><option>Socratic</option></select>
+        </div>
+        <div class="action-group">
+          <label for="orientation">Orientation</label>
+          <select id="orientation"><option>Positive</option><option>Constructive</option></select>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary">✓ Apply</button>
+          <button class="btn btn-secondary">✕ Cancel</button>
+        </div>
+      </div>
+    </aside>
+
     <!-- Bottom Right: Chat -->
-    <section class="panel refinements-panel">
-      <div class="panel-header refinements-header">
-    <div>
-      <h2>Suggested Refinements</h2>
-      <p class="subtitle">Suggestions to improve clarity, tone, grammar, and specificity.</p>
-    </div>
-    <button class="btn btn-primary" id="refine-again-btn">
-      <i class="fa-solid fa-arrows-rotate"></i> Refine Again
-    </button>
-  </div>
-
-  <div class="panel-body refinements-grid">
-    <!-- Card 1: Tone -->
-    <div class="suggestion-card" data-type="tone">
-      <div class="card-top">
-        <span class="card-label">Tone</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>You do well in commenting on the reactions of the crowd, good use of quotations e.g "the Martians seem to trigger a 'every man for himself' feeling with in the crowd."</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">You comment effectively on the crowd's reactions and your quotation choice is strong, for example: 'the Martians seem to trigger an 'every man for himself' feeling within the crowd.'</p>
+    <section class="panel chat-panel">
+      <div class="panel-header chat">Chat with the Feedback Co-pilot</div>
+      <div class="chat-messages" role="log" aria-live="polite">
+        <div class="message user">Can you paraphrase so it sounds more supportive and fix the grammar?</div>
+        <div class="message bot">
+          <p><strong>Of course, here is a more supportive feedback with improved grammar:</strong></p>
+          <p>You have made a solid start with relevant ideas and quotation choices, and you do show understanding of how Wells presents the Martians as frightening. To improve, try turning your quotations into deeper analysis...</p>
         </div>
       </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
+      <div class="chat-input-area">
+        <input type="text" placeholder="Type your message..." aria-label="Chat message input">
+        <button class="btn btn-primary"> Send</button>
       </div>
-    </div>
-
-    <!-- Card 2: Clarity -->
-    <div class="suggestion-card" data-type="clarity">
-      <div class="card-top">
-        <span class="card-label">Clarity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>e.g Words such as 'rush', 'jerked' and 'heaved.. indicating the danger of the Martians as an enemy and their effect on the reader is considered, but this still remains a bit vague.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">Strong word choices quoted ("rush," "jerked," "heaved"), but the effect on the reader is explained too generally—add specific connotations.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 3: Specificity -->
-    <div class="suggestion-card" data-type="specificity">
-      <div class="card-top">
-        <span class="card-label">Specificity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>The weaknesses of this response is in the references to the text as a whole. You use general and descriptive, rather than showing clear understanding.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">The main area to improve is your use of the novel as a whole. Some references are quite general and descriptive (what happens) rather than analytical (how Wells presents it and what it suggests). Adding brief quotations and commenting on technique will show clearer understanding.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 4: Grammar -->
-    <div class="suggestion-card" data-type="grammar">
-      <div class="card-top">
-        <span class="card-label">Grammar</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>"question but"</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">"question, but"</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="panel-footer refinements-footer">
-    <button class="btn btn-secondary">✕ Close</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-cloud-arrow-down"></i> Export</button>
-    <button class="btn btn-primary" id="apply-selected-btn"><i class="fa-solid fa-check-double"></i> Apply Selected</button>
-  </div>
-</section>
+    </section>
   </main>
   
   <!-- Fullscreen Reading Overlay (Moved OUTSIDE main/dashboard) -->

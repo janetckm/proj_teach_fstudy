@@ -81,14 +81,9 @@ nav a:hover { color: var(--color-primary); }
 
 /* Grid Positioning */
 .submission-panel { grid-row: 1 / 3; }
-.draft-panel { grid-column: 2 / 4; grid-row: 1; }
-/* .actions-panel { grid-column: 2 / 4; grid-row: 2; } */
-/* .chat-panel { grid-column: 2 / 4; grid-row: 2; } */
-.refinements-panel { grid-column: 2 / 4; grid-row: 2; }
-
-#submission-text{
-   min-height: 400px; 
-}
+.draft-panel { grid-column: 2; grid-row: 1; }
+.actions-panel { grid-column: 3; grid-row: 1; }
+.chat-panel { grid-column: 2 / 4; grid-row: 2; }
 
 /* Rich Text Editor & Toolbar */
 .rich-text-area {
@@ -292,129 +287,7 @@ body.reading-active .dashboard {
   pointer-events: none; /* Prevents click interception bugs */
 }
 
-/* Refinements Panel Header */
-.refinements-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background: #fff;
-  border-bottom: 1px solid var(--color-border);
-}
-.refinements-header h2 { margin: 0 0 4px 0; font-size: 1.25rem; color: var(--color-primary); }
-.refinements-header .subtitle { margin: 0; font-size: 0.85rem; color: var(--color-text-muted); font-style: italic; }
 
-/* Grid Layout for Cards */
-.refinements-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
-  padding: var(--space-md);
-  overflow-y: auto;
-  background: #f8fafc; /* Slightly different bg to distinguish from draft */
-}
-
-/* Suggestion Cards */
-.suggestion-card {
-  background: #f0fdf4; /* Light green bg */
-  border: 1px solid #bbf7d0;
-  border-radius: var(--radius);
-  padding: var(--space-md);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  transition: box-shadow 0.2s;
-}
-.suggestion-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 4px;
-}
-.card-label { font-weight: 700; color: var(--color-primary); font-size: 0.9rem; }
-.card-icon { color: var(--color-primary); font-size: 0.9rem; }
-
-/* Text Comparison Area */
-.text-comparison {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-height: 120px;
-}
-.text-block {
-  font-size: 0.85rem;
-  line-height: 1.4;
-  padding: 6px;
-  border-radius: 4px;
-  position: relative;
-}
-.text-block .label {
-  display: block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-  opacity: 0.7;
-}
-
-/* Original Text Styling */
-.text-block.original {
-  background: #fff;
-  color: var(--color-text-muted);
-  border: 1px solid #e2e8f0;
-  max-height: 80px;
-  overflow-y: auto;
-}
-
-/* Suggested Text Styling */
-.text-block.suggested {
-  background: #fff;
-  color: var(--color-text);
-  border: 1px solid #cbd5e1;
-  font-weight: 500;
-  flex: 1;
-  overflow-y: auto;
-}
-.text-block.suggested:focus {
-  outline: 2px solid var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-/* Card Actions (Check/X) */
-.card-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 4px;
-}
-.btn-icon {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid var(--color-border);
-  background: #fff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  transition: all 0.2s;
-}
-.btn-icon.accept { color: var(--color-primary); }
-.btn-icon.accept:hover { background: var(--color-primary); color: white; border-color: var(--color-primary); }
-.btn-icon.reject { color: var(--color-text-muted); }
-.btn-icon.reject:hover { background: #ef4444; color: white; border-color: #ef4444; }
-
-/* Panel Footer */
-.refinements-footer {
-  padding: var(--space-md);
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  justify-content: space-between;
-  background: #fff;
-}
 
 /* Responsive */
 @media (max-width: 1024px) {

@@ -108,6 +108,38 @@ document.addEventListener('DOMContentLoaded', () => {
     fullscreenToggle.focus();
   };
 
+  const generateBtn = document.getElementById('generate-btn');
+  
+  if (generateBtn) {
+    generateBtn.addEventListener('click', () => {
+      const sliders = document.querySelectorAll('.tri-slider');
+      const settings = {};
+      
+      // Map values: 0=Left, 1=Center, 2=Right
+      const mapValue = (val) => {
+        if(val == 0) return 'Left';
+        if(val == 2) return 'Right';
+        return 'Blended';
+      };
+
+      sliders.forEach(slider => {
+        const param = slider.dataset.param;
+        settings[param] = mapValue(slider.value);
+      });
+
+      console.log("Generating feedback with settings:", settings);
+      
+      // Visual feedback on button
+      const originalText = generateBtn.innerHTML;
+      generateBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Generating...';
+      
+      setTimeout(() => {
+        generateBtn.innerHTML = originalText;
+        alert(`Feedback generated with:\nFocus: ${settings.focus}\nScope: ${settings.scope}\nStrategy: ${settings.strategy}\nOrientation: ${settings.orientation}`);
+      }, 800);
+    });
+  }
+
   fullscreenToggle.addEventListener('click', openFullscreen);
   overlayClose.addEventListener('click', closeFullscreen);
 
@@ -120,53 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize
   updateFontSize(DEFAULT_FONT_SIZE);
-
-  if (applySelectedBtn && editor) {
-    applySelectedBtn.addEventListener('click', () => {
-      const acceptedCards = document.querySelectorAll('.suggestion-card .btn-icon.accept[aria-pressed="true"]');
-      
-      if (acceptedCards.length === 0) {
-        alert("Please accept at least one suggestion to apply.");
-        return;
-      }
-
-      let appendText = "<br><strong>--- Applied Refinements ---</strong><br><ul>";
-      
-      acceptedCards.forEach(btn => {
-        const card = btn.closest('.suggestion-card');
-        const suggestedText = card.querySelector('.text-block.suggested p').innerText;
-        const type = card.dataset.type;
-        appendText += `<li><strong>[${type}]</strong> ${suggestedText}</li>`;
-      });
-      
-      appendText += "</ul>";
-      
-      // Append to editor
-      editor.focus();
-      document.execCommand('insertHTML', false, appendText);
-      
-      // Visual feedback
-      applySelectedBtn.textContent = "✓ Applied";
-      setTimeout(() => {
-        applySelectedBtn.innerHTML = '<i class="fa-solid fa-check-double"></i> Apply Selected';
-      }, 2000);
-    });
-  }
-
-  // Toggle Accept/Reject State for Buttons
-  document.querySelectorAll('.btn-icon').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      // Toggle aria-pressed for state tracking
-      const isPressed = btn.getAttribute('aria-pressed') === 'true';
-      btn.setAttribute('aria-pressed', !isPressed);
-      
-      // Visual toggle logic (optional, CSS handles hover, but active state is good)
-      if (btn.classList.contains('accept')) {
-         btn.style.background = !isPressed ? 'var(--color-primary)' : '';
-         btn.style.color = !isPressed ? 'white' : '';
-      }
-    });
-  });
   
 });
 

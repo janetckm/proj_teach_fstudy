@@ -9,10 +9,11 @@
 </head>
 <body>
   <header>
-    <h1>Feedback Co-Pilot: S1</h1>
+    <h1>Feedback Co-Pilot: S3
+    </h1>
     <nav>
-      <a href="#"></a>
-      <a href="page2/index.html">Next</a>
+      <a href="../page2/index.html">Previous</a>
+      <a href="../page4/index.html">Next</a>
       <a href="#">Logout</a>
     </nav>
   </header>
@@ -35,8 +36,7 @@
     <p>Wells make the Martians have a terrifying effect on the crowd watching the Martians walking towards them. Wells uses the words frightened and terrified to show how the crowd feels and the Martians seem to trigger a “every man for himself” feeling within the crowd.</p>
     <p>Wells creates a sense that the Martians are terrifying and completely different to us. He shows this with the words “rolling motion” and “fast as flying birds”. This shows how unusual the Martians are.</p>
   </div>
-  
-  <!-- Left Column: Rubric -->
+
   <div class="panel-header">Rubric</div>
       <div class="panel-body">
         <div class="rubric-item">Level 1: Simple, explicit comments, 1-5 marks</div>
@@ -75,115 +75,109 @@
       </div>
     </section>
 
-    <!-- Bottom Right: Chat -->
-    <section class="panel refinements-panel">
-      <div class="panel-header refinements-header">
-    <div>
-      <h2>Suggested Refinements</h2>
-      <p class="subtitle">Suggestions to improve clarity, tone, grammar, and specificity.</p>
+    <!-- Right Top: Feedback Bank -->
+<aside class="panel feedback-bank-panel">
+  <div class="panel-header bank-header">
+    <h2>Your Feedback Bank</h2>
+    <div class="bank-actions">
+      <button class="btn-link"><i class="fa-solid fa-plus"></i> Add snippet</button>
+      <button class="btn-link"><i class="fa-solid fa-gear"></i> Manage Bank</button>
     </div>
-    <button class="btn btn-primary" id="refine-again-btn">
-      <i class="fa-solid fa-arrows-rotate"></i> Refine Again
-    </button>
+  </div>
+  
+  <div class="bank-search">
+    <input type="text" id="snippet-search" placeholder="Search snippets...">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
   </div>
 
-  <div class="panel-body refinements-grid">
-    <!-- Card 1: Tone -->
-    <div class="suggestion-card" data-type="tone">
-      <div class="card-top">
-        <span class="card-label">Tone</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>You do well in commenting on the reactions of the crowd, good use of quotations e.g "the Martians seem to trigger a 'every man for himself' feeling with in the crowd."</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">You comment effectively on the crowd's reactions and your quotation choice is strong, for example: 'the Martians seem to trigger an 'every man for himself' feeling within the crowd.'</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
+  <div class="panel-body snippet-list">
+    <!-- Left Column -->
+    <div class="snippet-column">
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="elaborate-quotes" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Elaborate on the quotes you choose to explore</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="effective-evidence">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Effective selection of evidence</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="writer-choice">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Makes <strong>some attempt</strong> to describe why a writer might have chosen particular words</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="link-impact-1">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Stronger moments of analysis appear when you link word choice to reader impact</span>
+      </label>
+
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="link-impact-2" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Stronger moments of analysis appear when you link word choice to reader impact</span>
+      </label>
+
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="avoid-repetition">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Avoid repetition, make sure to diversify in the language you use</span>
+      </label>
     </div>
 
-    <!-- Card 2: Clarity -->
-    <div class="suggestion-card" data-type="clarity">
-      <div class="card-top">
-        <span class="card-label">Clarity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>e.g Words such as 'rush', 'jerked' and 'heaved.. indicating the danger of the Martians as an enemy and their effect on the reader is considered, but this still remains a bit vague.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">Strong word choices quoted ("rush," "jerked," "heaved"), but the effect on the reader is explained too generally—add specific connotations.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
+    <!-- Right Column -->
+    <div class="snippet-column">
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="some-understanding" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Shows <strong>some understanding</strong> of ideas, themes, events and characters in the texts studied</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="points-general">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Some points remain a little general; aim for more precise explanation of <em>how</em> the language has an impact</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="explains-clearly" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text"><strong>Explains clearly</strong> the effects of certain words and sentences on the intended reader</span>
+      </label>
+      
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="link-impact-3">
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Stronger moments of analysis appear when you link word choice to reader impact</span>
+      </label>
 
-    <!-- Card 3: Specificity -->
-    <div class="suggestion-card" data-type="specificity">
-      <div class="card-top">
-        <span class="card-label">Specificity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>The weaknesses of this response is in the references to the text as a whole. You use general and descriptive, rather than showing clear understanding.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">The main area to improve is your use of the novel as a whole. Some references are quite general and descriptive (what happens) rather than analytical (how Wells presents it and what it suggests). Adding brief quotations and commenting on technique will show clearer understanding.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="simple-inferences" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">Makes <strong>simple, limited</strong> inferences and deductions</span>
+      </label>
 
-    <!-- Card 4: Grammar -->
-    <div class="suggestion-card" data-type="grammar">
-      <div class="card-top">
-        <span class="card-label">Grammar</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>"question but"</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">"question, but"</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
+      <label class="snippet-item">
+        <input type="checkbox" data-snippet="too-general" checked>
+        <span class="toggle-switch"></span>
+        <span class="snippet-text">The response is <strong>too general</strong></span>
+      </label>
     </div>
-
   </div>
 
-  <div class="panel-footer refinements-footer">
-    <button class="btn btn-secondary">✕ Close</button>
-    <button class="btn btn-secondary"><i class="fa-solid fa-cloud-arrow-down"></i> Export</button>
-    <button class="btn btn-primary" id="apply-selected-btn"><i class="fa-solid fa-check-double"></i> Apply Selected</button>
+  <div class="panel-footer editor-footer">
+    <button class="btn btn-secondary"><i class="fa-solid fa-shuffle"></i> Remix again</button>
+    <button class="btn btn-secondary"><i class="fa-solid fa-pen"></i> Edit</button>
+    <button class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send </button>
   </div>
-</section>
+</aside>
+
+
   </main>
   
   <!-- Fullscreen Reading Overlay (Moved OUTSIDE main/dashboard) -->
