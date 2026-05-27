@@ -9,7 +9,7 @@
   --color-chat-user: #e8f5e9;
   --color-chat-bot: #f3f4f6;
   --space-sm: 0.5rem;
-  --space-md: 1rem;
+  --space-md: 0.6rem;
   --space-lg: 1.5rem;
   --radius: 0.5rem;
 }
@@ -28,7 +28,7 @@ body {
 header {
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
-  padding: var(--space-md) var(--space-lg);
+  padding: 1px var(--space-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ nav a:hover { color: var(--color-primary); }
   grid-template-rows: auto 1fr;
   gap: var(--space-md);
   padding: var(--space-md);
-  height: calc(100vh - 60px);
+  height: calc(100vh - 30px);
   overflow: hidden;
 }
 
@@ -426,7 +426,7 @@ body.reading-active .dashboard {
   border: 2px solid var(--color-primary);
 }
 .editor-footer {
-  padding: var(--space-md);
+  padding: 2px var(--space-md);
   border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: space-between;
