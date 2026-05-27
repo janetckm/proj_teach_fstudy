@@ -80,106 +80,122 @@ The weaknesses of this response is in the references to the text as a whole. You
 
     <!-- Bottom Right: Chat -->
     <section class="panel refinements-panel">
-      <div class="panel-header refinements-header">
-    <div>
-      <h2>Suggested Refinements</h2>
-      <p class="subtitle">Suggestions to improve clarity, tone, grammar, and specificity.</p>
-    </div>
-    <button class="btn btn-primary" id="refine-again-btn">
+  <div class="panel-header refinements-header">
+    <h2>Suggested Refinements</h2>
+    <button class="btn btn-sm btn-secondary">
       <i class="fa-solid fa-arrows-rotate"></i> Refine Again
     </button>
   </div>
 
-  <div class="panel-body refinements-grid">
-    <!-- Card 1: Tone -->
-    <div class="suggestion-card" data-type="tone">
-      <div class="card-top">
-        <span class="card-label">Tone</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>You do well in commenting on the reactions of the crowd, good use of quotations e.g "the Martians seem to trigger a 'every man for himself' feeling with in the crowd."</p>
+  <div class="refinements-grid">
+    <!-- Left Column -->
+    <div class="refinements-col">
+      
+      <!-- Card: Tone -->
+      <div class="suggestion-card">
+        <div class="card-header">
+          <span class="card-type">Tone</span>
+          <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
         </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">You comment effectively on the crowd's reactions and your quotation choice is strong, for example: 'the Martians seem to trigger an 'every man for himself' feeling within the crowd.'</p>
+        <div class="card-content">
+          <div class="text-block original">
+            <strong>Original:</strong> You do well in commenting on the reactions of the crowd, good use of quotations e.g "the Martians seem to trigger a 'every man for himself' feeling with in the crowd."
+          </div>
+          <div class="text-block suggestion">
+            <strong>Suggested:</strong> You comment effectively on the crowd's reactions and your quotation choice is strong, for example: 'the Martians seem to trigger an 'every man for himself' feeling within the crowd.'
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-icon accept" aria-label="Accept"><i class="fa-solid fa-check"></i></button>
+          <button class="btn-icon reject" aria-label="Reject"><i class="fa-solid fa-xmark"></i></button>
         </div>
       </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Card: Specificity -->
+      <div class="suggestion-card">
+        <div class="card-header">
+          <span class="card-type">Specificity</span>
+          <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
+        </div>
+        <div class="card-content">
+          <div class="text-block original">
+            <strong>Original:</strong> The weaknesses of this response is in the references to the text as a whole. You use general and descriptive, rather than showing clear understanding.
+          </div>
+          <div class="text-block suggestion">
+            <strong>Suggested:</strong> The main area to improve is your use of the novel as a whole. Some references are quite general and descriptive (what happens) rather than analytical (how Wells presents it and what it suggests). Adding brief quotations and commenting on technique will show clearer understanding.
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-icon accept" aria-label="Accept"><i class="fa-solid fa-check"></i></button>
+          <button class="btn-icon reject" aria-label="Reject"><i class="fa-solid fa-xmark"></i></button>
+        </div>
       </div>
+
     </div>
 
-    <!-- Card 2: Clarity -->
-    <div class="suggestion-card" data-type="clarity">
-      <div class="card-top">
-        <span class="card-label">Clarity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>e.g Words such as 'rush', 'jerked' and 'heaved.. indicating the danger of the Martians as an enemy and their effect on the reader is considered, but this still remains a bit vague.</p>
+    <!-- Right Column -->
+    <div class="refinements-col">
+      
+      <!-- Card: Clarity -->
+      <div class="suggestion-card">
+        <div class="card-header">
+          <span class="card-type">Clarity</span>
+          <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
         </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">Strong word choices quoted ("rush," "jerked," "heaved"), but the effect on the reader is explained too generally—add specific connotations.</p>
+        <div class="card-content">
+          <div class="text-block original">
+            <strong>Original:</strong> e.g Words such as 'rush', 'jerked' and 'heaved.. indicating the danger of the Martians as an enemy and their effect on the reader is considered, but this still remains a bit vague.
+          </div>
+          <div class="text-block suggestion">
+            <strong>Suggested:</strong> Strong word choices quoted ("rush," "jerked," "heaved"), but the effect on the reader is explained too generally—add specific connotations.
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-icon accept" aria-label="Accept"><i class="fa-solid fa-check"></i></button>
+          <button class="btn-icon reject" aria-label="Reject"><i class="fa-solid fa-xmark"></i></button>
         </div>
       </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Card: Grammar 1 -->
+      <div class="suggestion-card compact">
+        <div class="card-header">
+          <span class="card-type">Grammar</span>
+          <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
+        </div>
+        <div class="card-content compact-content">
+          <div class="text-block original">
+            <strong>Original:</strong> "question but"
+          </div>
+          <div class="text-block suggestion">
+            <strong>Suggestion:</strong> "question, but"
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-icon accept" aria-label="Accept"><i class="fa-solid fa-check"></i></button>
+          <button class="btn-icon reject" aria-label="Reject"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+
+      <!-- Card: Grammar 2 -->
+      <div class="suggestion-card compact">
+        <div class="card-header">
+          <span class="card-type">Grammar</span>
+          <i class="fa-solid fa-wand-magic-sparkles sparkle-icon"></i>
+        </div>
+        <div class="card-content compact-content">
+          <div class="text-block original">
+            <strong>Original:</strong> "dangerouss"
+          </div>
+          <div class="text-block suggestion">
+            <strong>Suggested:</strong> "dangerous"
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-icon accept" aria-label="Accept"><i class="fa-solid fa-check"></i></button>
+          <button class="btn-icon reject" aria-label="Reject"><i class="fa-solid fa-xmark"></i></button>
+        </div>
       </div>
     </div>
-
-    <!-- Card 3: Specificity -->
-    <div class="suggestion-card" data-type="specificity">
-      <div class="card-top">
-        <span class="card-label">Specificity</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>The weaknesses of this response is in the references to the text as a whole. You use general and descriptive, rather than showing clear understanding.</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">The main area to improve is your use of the novel as a whole. Some references are quite general and descriptive (what happens) rather than analytical (how Wells presents it and what it suggests). Adding brief quotations and commenting on technique will show clearer understanding.</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
-    <!-- Card 4: Grammar -->
-    <div class="suggestion-card" data-type="grammar">
-      <div class="card-top">
-        <span class="card-label">Grammar</span>
-        <i class="fa-solid fa-wand-magic-sparkles card-icon"></i>
-      </div>
-      <div class="text-comparison">
-        <div class="text-block original">
-          <span class="label">Original:</span>
-          <p>"dangerouss"</p>
-          <p>"question but"</p>
-        </div>
-        <div class="text-block suggested">
-          <span class="label">Suggested:</span>
-          <p contenteditable="true">"dangerous","question, but"</p>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-icon accept" aria-label="Accept suggestion"><i class="fa-solid fa-check"></i></button>
-        <button class="btn-icon reject" aria-label="Reject suggestion"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-    </div>
-
   </div>
 
   <div class="panel-footer refinements-footer">
