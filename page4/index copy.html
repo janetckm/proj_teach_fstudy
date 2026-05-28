@@ -99,81 +99,20 @@ To push this further, some of your wider-novel references become general and des
    
 
     <!-- Focus Slider -->
-   <div class="control-group">
-  <label class="control-label">Focus</label>
-  <div class="segmented-control">
-    <label class="segment">
-      <input type="radio" name="focus" value="Local">
-      <span>Local</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="focus" value="Blended" checked>
-      <span>Blended</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="focus" value="Global">
-      <span>Global</span>
-    </label>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label">Scope</label>
-  <div class="segmented-control">
-    <label class="segment">
-      <input type="radio" name="scope" value="Comprehensive" checked>
-      <span>Comprehensive</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="scope" value="Blended">
-      <span>Blended</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="scope" value="Focused">
-      <span>Focused</span>
-    </label>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label">Strategy</label>
-  <div class="segmented-control">
-    <label class="segment">
-      <input type="radio" name="strategy" value="Direct">
-      <span>Direct</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="strategy" value="Blended" checked>
-      <span>Blended</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="strategy" value="Indirect">
-      <span>Indirect</span>
-    </label>
-  </div>
-</div>
-
-<div class="control-group">
-  <label class="control-label">Orientation</label>
-  <div class="segmented-control">
-    <label class="segment">
-      <input type="radio" name="orientation" value="Positive">
-      <span>Positive</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="orientation" value="Blended" checked>
-      <span>Blended</span>
-    </label>
-    <label class="segment">
-      <input type="radio" name="orientation" value="Negative">
-      <span>Negative</span>
-    </label>
-  </div>
-</div>
-
+    <div class="slider-group">
+      <label class="slider-label-main">Focus</label>
+      <div class="slider-wrapper">
+        <div class="slider-labels">
+          <span>Local</span>
+          <span class="center-label">Blended</span>
+          <span>Global</span>
+        </div>
+        <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="focus">
+      </div>
+    </div>
 
     <!-- Scope Slider -->
-    <!-- <div class="slider-group">
+    <div class="slider-group">
       <label class="slider-label-main">Scope</label>
       <div class="slider-wrapper">
         <div class="slider-labels">
@@ -183,10 +122,10 @@ To push this further, some of your wider-novel references become general and des
         </div>
         <input type="range" min="0" max="2" step="1" value="0" class="tri-slider" data-param="scope">
       </div>
-    </div> -->
+    </div>
 
     <!-- Strategy Slider -->
-    <!-- <div class="slider-group">
+    <div class="slider-group">
       <label class="slider-label-main">Strategy</label>
       <div class="slider-wrapper">
         <div class="slider-labels">
@@ -196,10 +135,10 @@ To push this further, some of your wider-novel references become general and des
         </div>
         <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="strategy">
       </div>
-    </div> -->
+    </div>
 
     <!-- Orientation Slider -->
-    <!-- <div class="slider-group">
+    <div class="slider-group">
       <label class="slider-label-main">Orientation</label>
       <div class="slider-wrapper">
         <div class="slider-labels">
@@ -209,7 +148,7 @@ To push this further, some of your wider-novel references become general and des
         </div>
         <input type="range" min="0" max="2" step="1" value="1" class="tri-slider" data-param="orientation">
       </div>
-    </div> -->
+    </div>
 
     <button class="btn-generate" id="generate-btn">
       <i class="fa-solid fa-wand-magic-sparkles"></i> Generate
