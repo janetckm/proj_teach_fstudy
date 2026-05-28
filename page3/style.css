@@ -295,6 +295,7 @@ body.reading-active .dashboard {
 .feedback-bank-panel {
   background: #f0fdf4; /* Light green background */
   border: 2px solid #bbf7d0;
+  min-height: 350px;
 }
 
 .bank-header {
